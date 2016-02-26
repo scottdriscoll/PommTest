@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            {% for student in students %}
+                <a href="{{ path('view_student', {'id': student.id}) }}">{{ student.name }}</a><br>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
